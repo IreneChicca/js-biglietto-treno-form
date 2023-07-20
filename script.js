@@ -62,7 +62,7 @@ sendBtn.addEventListener('click', function () {
     bglKm.innerHTML = userKm;
 
 
-    let ticketPrice = "€ " + (userKm * 0.21)
+    let ticketPrice = (userKm * 0.21)
 
 
 
