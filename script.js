@@ -40,12 +40,9 @@ const bglKm = document.getElementById("bgl-km");
 const bglPrice = document.getElementById("bgl-price");
 
 
-// prova
+
 
 const ticket = document.getElementById("ticket");
-
-
-
 
 sendBtn.addEventListener('click', function () {
 
@@ -68,16 +65,16 @@ sendBtn.addEventListener('click', function () {
 
     if (userAge < 18) {
 
-        ticketPrice = ticketPrice - ticketPrice * 0.20
+        ticketPrice = (ticketPrice - ticketPrice * 0.20).toFixed(2)
 
     }
 
     else if (userAge > 65) {
-        ticketPrice = ticketPrice - ticketPrice * 0.40
+        ticketPrice = (ticketPrice - ticketPrice * 0.40).toFixed(2)
 
     }
 
-    bglPrice.innerHTML = ticketPrice;
+    bglPrice.innerHTML = "€ " + ticketPrice;
 
 
     ticket.className = " d-block"
